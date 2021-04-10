@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+  
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Health Insurance Cost</h1>
+  
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="age" placeholder="Age" required="required" />
+        <input type="text" name="sex" placeholder="Gender" required="required" />
+		<input type="text" name="bmi" placeholder="BMI" required="required" />
+    <input type="text" name="children" placeholder="Children" required="required" />
+		<input type="text" name="smoker" placeholder="Smoker" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
